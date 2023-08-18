@@ -27,8 +27,8 @@ const Post = ({ item }) => {
 
     return (
         <Card sx={{
-            minWidth:260, m: 2, boxShadow: `20px 20px 40px #c7cacf, -20px -20px 40px #c7cacf;`,
-            borderRadius: "15px", backgroundColor: "#eaeef3", alignItems: "center"
+            minWidth:260, m: 2, boxShadow: `20px 20px 40px #ffffff00, -20px -20px 40px #ffffff00;`,
+            borderRadius: "6px", backgroundColor: "#eaeef3", alignItems: "center"
         }}>
             <CardHeader
                 avatar={

@@ -1,11 +1,41 @@
 .item{
     display: flex;
-    padding: 6px 10px 6px 10px;
+    padding: 6px;
     align-items: center;
     justify-content: flex-start;
     border-radius: 10px;
+font-size: 1.6vmax;
+text-align: left;
+margin-left: 1vmax;
+margin-top: 1vmax;
+/* width: 130px; */
 }
 .icon{
     margin-right: 0.5rem;
     margin-top: 6px
+}
+.iconActive{
+    margin-right: 0.5rem;
+    margin-top: 6px;
+    font-size: 1rem
+}
+
+.iconActive > svg{
+    /* margin-right: 0.5rem; */
+    /* margin-top: 6px; */
+    font-size: 1.5rem
+}
+.iconInActive{
+    margin-right: 0.5rem;
+    font-size: 2vmax;
+}
+.hidden {
+    display:none;
+    transition-duration: 0.4s;
+    transition-delay: 0.1s;
+}
+.show {
+    /* display:block; */
+    transition-duration: 0.10s;
+    transition-delay: 10s;
 }

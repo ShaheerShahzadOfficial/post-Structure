@@ -2,7 +2,7 @@ import React from "react"
 
 import Post from './Post'
 import SideBar from "./SideBar/Sidebar"
-
+import "./App.css"
 function App() {
 
   const array = [
@@ -29,17 +29,22 @@ function App() {
   ]
 
   return (
-    <div style={{display:"flex"}}>
-<div>
-<SideBar />
-</div>
+    <div className="App2">
+
+<SideBar>
+
 {/* <div></div> */}
-      <div style={{width:"100%", alignItems: "center", justifyContent: "center",overflowY:"auto", display: "grid", flexDirection: "column" }}>
+      <div className="app3"
+       >
         {
           array.map((item, i) => <Post key={i} item={item} />)
         }
       </div>
+</SideBar>
+
     </div>
+
+
   )
 }
 
