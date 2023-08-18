@@ -1,6 +1,7 @@
 import React from "react"
 
 import Post from './Post'
+import SideBar from "./SideBar/Sidebar"
 
 function App() {
 
@@ -28,11 +29,16 @@ function App() {
   ]
 
   return (
-    <div style={{ alignItems: "center", justifyContent: "center", display: "flex", flexDirection: "column" }}>
-      {
-        array.map((item, i) => <Post key={i} item={item} />)
-      }
-
+    <div style={{display:"flex"}}>
+<div>
+<SideBar />
+</div>
+{/* <div></div> */}
+      <div style={{width:"100%", alignItems: "center", justifyContent: "center",overflowY:"auto", display: "grid", flexDirection: "column" }}>
+        {
+          array.map((item, i) => <Post key={i} item={item} />)
+        }
+      </div>
     </div>
   )
 }
