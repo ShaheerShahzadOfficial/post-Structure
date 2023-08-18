@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
@@ -28,7 +27,7 @@ const Post = ({ item }) => {
 
     return (
         <Card sx={{
-            width: 300, m: 2, boxShadow: `20px 20px 40px #c7cacf, -20px -20px 40px #c7cacf;`,
+            minWidth:260, m: 2, boxShadow: `20px 20px 40px #c7cacf, -20px -20px 40px #c7cacf;`,
             borderRadius: "15px", backgroundColor: "#eaeef3", alignItems: "center"
         }}>
             <CardHeader
@@ -91,7 +90,7 @@ const Post = ({ item }) => {
                     </React.Fragment>
                 ) : (
                     <React.Fragment>
-                        <Typography variant="caption" color="Scrollbar"  component="h2">
+                        <Typography variant="caption" color="black"  component="h2">
                             {
                                item?.caption
                             }
