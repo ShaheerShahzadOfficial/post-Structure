@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./Messages.css"
-import Users from './Components/users'
+import Users from './Components/Users'
 import ReactScrollToBottom from "react-scroll-to-bottom";
 
 const Messages = () => {
