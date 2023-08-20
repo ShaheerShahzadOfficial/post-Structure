@@ -2,9 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import './Item.css'
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import {  useLocation, useNavigate } from 'react-router-dom';
 function Item({ icon, name, open }) {
-const [Active, setActive] = useState(false)
 
     const subheading = {
         true: {
@@ -12,22 +11,20 @@ const [Active, setActive] = useState(false)
         },
         false: {
             opacity: 0,
-            display: 'none'
+            display: 'none',
+        
         }
     }
 
     const location = useLocation();
 
-useEffect(() => {
-console.log(location.pathname)
-}, [])
 
 
 
 const navigate = useNavigate();
 
     return (
-        <motion.div onClick={()=>navigate(`${name === "Home" ? "/" : `/${name}`}`)} className={location.pathname === "/" && name ==="Home" ? "itemActive" : location.pathname === name ? 'itemActive': 'item'}
+        <motion.div style={{width:open ? "90%" : "60%"}} onClick={()=>navigate(`${name === "Home" ? "/" : `/${name}`}`)} className={location.pathname === "/" && name ==="Home" ? "itemActive" : location.pathname === name ? 'itemActive': 'item'}
             whileHover={{
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
                 boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.1)",

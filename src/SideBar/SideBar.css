@@ -27,7 +27,7 @@ width: 100%;
 }
 .sidebar_container {
   height: 100vh;
-  background: linear-gradient(179deg, #176eb5, #d545d7);
+  background: linear-gradient(179deg, #008cff, #00f7ff);
   position: fixed;
   top: 0;
   left: 0;

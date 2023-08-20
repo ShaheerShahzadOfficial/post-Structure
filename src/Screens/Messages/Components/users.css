@@ -1,0 +1,17 @@
+.userContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding:10px;
+    height: 80px;
+    /* border-bottom:  2px solid rgb(214, 214, 214); */
+    /* border-bottom-width: 80%; */
+}
+.userContainer > div {
+    width: 4rem;
+    height: 4rem;
+}
+.userContainer > span{
+    margin-left: 2rem;
+}

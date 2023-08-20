@@ -5,6 +5,8 @@ import {BrowserRouter , Routes , Route} from 'react-router-dom'
 
 import "./App.css"
 import Home from "./Screens/Home"
+import Messages from "./Screens/Messages/Messages"
+
 function App() {
 
 
@@ -16,7 +18,7 @@ function App() {
 
 <Routes>
 <Route exact path='/' element={<Home/>} />
-<Route exact path='/Messages' element={<Home/>} />
+<Route exact path='/Messages' element={<Messages/>} />
 {/* <Route exact path='/signup' element={<Signup/>} /> */}
 
 </Routes>

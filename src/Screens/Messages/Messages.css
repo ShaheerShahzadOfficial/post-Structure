@@ -1,0 +1,79 @@
+.MainMessageDiv {
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    max-width: 100%;
+    max-height: 100vh;
+    height: 100vh;
+    /* position: absolute; */
+
+}
+
+
+.messageSidepanel{
+    cursor: pointer;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 3.5rem 0;
+    width: 18rem;
+}
+.emptyContainer{
+    cursor: pointer;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 3.5rem 0;
+    width: auto;
+}
+.messageContainer{
+    width: auto;
+    cursor: pointer;
+    width: 100%;
+    background-color: #b9b5b5;
+    display: flex;
+    flex-direction: column;
+    padding: 3.5rem 0;
+}
+
+
+.chatBox {
+    box-sizing: border-box;
+    height: 70%;
+    border-bottom: 0.2vmax solid #0d9b5f;
+  
+  }
+  .InputBox {
+    /* height: 15%; */
+    box-sizing: border-box;
+    display: flex;
+    border: 0.2vmax solid #0d9b5f;
+  }
+  #chatInput {
+    width: 80%;
+    align-self: flex-start;
+    border: none;
+    background-color: white;
+    font: 800 1.6vmax "Roboto";
+    padding: 2vmax;
+    box-sizing: border-box;
+    color: #015e5e;
+    outline: none;
+  }
+  .sendbtn{
+      border: none;
+      width: 20%;
+      height: 100%;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: xx-large;
+      font-weight: 800;
+      font-family: 'Rouge Script', cursive;
+      background-color: #00362e;
+      color: #0d9b5f;
+  }
+  .sendbtn:hover{
+    background-color: #0d9b5f;
+    color: #00362e;
+  }
