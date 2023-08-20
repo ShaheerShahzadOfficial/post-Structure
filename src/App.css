@@ -4,11 +4,13 @@
   display: flex
 }
 
-.app3{
-  min-width: 100%;
-  align-items: "center";
-  justify-content: "center";
-  overflow-y: "auto";
-  display: "grid";
-  flex-direction: "column"
+.app3 {
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 2vmax auto;
+  width: 76vw;
+  flex-direction: column;
 }

@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import './Item.css'
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 function Item({ icon, name, open }) {
+const [Active, setActive] = useState(false)
 
     const subheading = {
         true: {
@@ -13,8 +15,19 @@ function Item({ icon, name, open }) {
             display: 'none'
         }
     }
+
+    const location = useLocation();
+
+useEffect(() => {
+console.log(location.pathname)
+}, [])
+
+
+
+const navigate = useNavigate();
+
     return (
-        <motion.div className='item'
+        <motion.div onClick={()=>navigate(`${name === "Home" ? "/" : `/${name}`}`)} className={location.pathname === "/" && name ==="Home" ? "itemActive" : location.pathname === name ? 'itemActive': 'item'}
             whileHover={{
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
                 boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.1)",
@@ -28,15 +41,15 @@ function Item({ icon, name, open }) {
                 type: 'none', duration: 0.1
             }}
         >
-            <motion.div className={open ? "iconActive" : "iconInActive"}>
+            <motion.div className={open===true ? "iconActive" : "iconInActive"}>
                 {icon}
             </motion.div>
-            {open ? <motion.span
+            <motion.span
                 variants={subheading}
-                className={open === true ? "show":"hidden"}
+                className={open === true ? "show" : "hidden"}
             >
                 {name}
-            </motion.span> : null}
+            </motion.span>
         </motion.div>
     )
 }

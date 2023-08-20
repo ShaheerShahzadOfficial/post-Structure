@@ -14,7 +14,7 @@ import { BiSolidVideos, BiSolidAddToQueue, BiMenu } from "react-icons/bi"
 import Item from "./Components/item";
 import { useState } from "react";
 function SideBar({ children }) {
-  const [open, setOpen] = useState(window.innerWidth <= 767 ? false : true);
+  const [open, setOpen] = useState(true);
 
 
   // for collpsing sidebar
@@ -25,7 +25,7 @@ function SideBar({ children }) {
   return (
     <div className="App">
 
-      <div className={`sidebar_container  ${open === true ? "sidebarContainerActive" : "sidebarContainerInActive"}`}>
+      <div style={{display : window.innerWidth <= 767 ? "none" : "block"}} className={`sidebar_container  ${open === true ? "sidebarContainerActive" : "sidebarContainerInActive"}`}>
 
         <div className={`sidebar ${open === true ? "sidebarActive" : "sidebarInActive"}`}>
 
@@ -69,7 +69,7 @@ function SideBar({ children }) {
       </div>
 
 
-      <div className={`body_container ${open === true ? "bodyActive" : "bodyInActive"}`}>
+      <div className={`body_container ${window.innerWidth <= 767 ?"" :open === true  ? "bodyActive" : "bodyInActive"}`}>
 
         {children}
       </div>

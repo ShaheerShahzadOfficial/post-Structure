@@ -1,39 +1,65 @@
-.item{
+.item {
     display: flex;
     padding: 6px;
     align-items: center;
     justify-content: flex-start;
     border-radius: 10px;
-font-size: 1.6vmax;
-text-align: left;
-margin-left: 1vmax;
-margin-top: 1vmax;
-/* width: 130px; */
+    font-size: 1.6vmax;
+    text-align: left;
+    margin-left: 1vmax;
+    margin-top: 1vmax;
+    /* width: 130px; */
 }
-.icon{
+
+.itemActive {
+    display: flex;
+    padding: 6px;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    font-size: 1.6vmax;
+    text-align: left;
+    margin-left: 1vmax;
+    margin-top: 1vmax;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    cursor: pointer;
+    width: 90%;
+}
+
+
+
+.icon {
     margin-right: 0.5rem;
     margin-top: 6px
 }
-.iconActive{
+
+.iconActive {
     margin-right: 0.5rem;
     margin-top: 6px;
     font-size: 1rem
 }
 
-.iconActive > svg{
+.iconActive>svg {
     /* margin-right: 0.5rem; */
     /* margin-top: 6px; */
     font-size: 1.5rem
 }
-.iconInActive{
+
+.iconInActive {
     margin-right: 0.5rem;
     font-size: 2vmax;
 }
+
 .hidden {
-    display:none;
+    display: none;
     transition-duration: 0.4s;
     transition-delay: 0.1s;
 }
+
 .show {
     /* display:block; */
     transition-duration: 0.10s;
